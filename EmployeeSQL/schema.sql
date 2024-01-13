@@ -6,8 +6,8 @@ CREATE TABLE "employees" (
     "emp_no" int   NOT NULL,
     "emp_title_id" varchar(5)   NOT NULL,
     "birth_date" date   NOT NULL,
-    "first_name" text   NOT NULL,
-    "last_name" text   NOT NULL,
+    "first_name" varchar(20)   NOT NULL,
+    "last_name" varchar(20)   NOT NULL,
     "sex" varchar(1)   NOT NULL,
     "hire_date" date   NOT NULL,
     CONSTRAINT "pk_employees" PRIMARY KEY (
@@ -22,7 +22,7 @@ CREATE TABLE "salaries" (
 
 CREATE TABLE "titles" (
     "title_id" varchar(5)   NOT NULL,
-    "title" text   NOT NULL,
+    "title" varchar(30)   NOT NULL,
     CONSTRAINT "pk_titles" PRIMARY KEY (
         "title_id"
      )
@@ -30,7 +30,7 @@ CREATE TABLE "titles" (
 
 CREATE TABLE "departments" (
     "dept_no" varchar(4)   NOT NULL,
-    "dept_name" text   NOT NULL,
+    "dept_name" varchar(30)   NOT NULL,
     CONSTRAINT "pk_departments" PRIMARY KEY (
         "dept_no"
      )

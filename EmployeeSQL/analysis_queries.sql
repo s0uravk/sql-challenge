@@ -41,7 +41,7 @@ AND last_name ILIKE 'B%';
 --6--
 --List each employee in the Sales department, including their employee number, last name, and first name.
 SELECT e.emp_no, e.first_name,e.last_name
-FROm employees e
+FROM employees e
 INNER JOIN dept_emp de
 ON e.emp_no = de.emp_no
 INNER JOIN departments d
